@@ -1,0 +1,34 @@
+paper:
+  doi: https://doi.org/10.1596/1813-9450-10626
+  title: Migration, Families, and Counterfactual Families
+  journal: World Bank Policy Research Working Paper
+  year: 2023
+  authors: Simone Bertoli, Elie Murard, David McKenzie
+  language: stata
+  materials: folder
+
+replications:
+  - id: tab_1
+    type: table
+    label: Table 1
+    description: Descriptive statistics by gender and age group
+    engine: stata
+    data: data/ACS2017-2021_finalready.dta
+    code: code/tab_1.do
+    stata_source: stata/Table1.do
+    format: code/format_tab_1.R
+    output: artifacts/staging/Table1.smcl
+    artifact: artifacts/tab_1.html
+    notes: Analysis code is Stata; R helpers format output for Shiny.
+
+  - id: fig_1
+    type: figure
+    label: Figure 1
+    description: "Panel (a): spouse absent and separated/divorced shares by years in the US (men)"
+    engine: stata
+    data: data/ACS2017-2021_finalready.dta
+    code: code/fig_1.do
+    stata_source: stata/Fig1_panelA.do
+    output: artifacts/staging/Fig1_panelA.png
+    artifact: artifacts/fig_1.png
+    notes: Stata exports PNG; R displays the file directly (no format step).

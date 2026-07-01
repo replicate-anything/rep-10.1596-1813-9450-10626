@@ -1,0 +1,50 @@
+* 00000002
+*! version 1.0.0
+* Do not erase or edit this file
+* It is used by Stata to track the ado and help
+* files you have installed.
+
+S http://www.stata-journal.com/software/sj12-4
+N sg97_5.pkg
+D  5 Nov 2023
+U 1
+d SJ12-4 sg97_5. Update: A programmer's command...
+d Update: A programmer's command to build
+d   formatted statistical tables
+d by John Luke Gallup, Portland State University
+d Support:  jlgallup@@pdx.edu
+d After installation, type help ^frmttable^
+f f\frmttable.ado
+f f\frmttable.sthlp
+f f\frmt_opts.sthlp
+f l\l_cfrmt.mlib
+f g\greek_in_word.sthlp
+f o\outreg.ado
+f o\outreg_complete.sthlp
+f o\outreg.sthlp
+f o\outreg_update.sthlp
+e
+S http://www.stata-journal.com/software/sj14-2
+N st0085_2.pkg
+D 16 Nov 2023
+U 2
+d SJ14-2 st0085_2. Update: Making regression...
+d Update: Making regression tables from stored
+d   estimates
+d by Ben Jann, University of Bern
+d Support:  jann@@soz.unibe.ch
+d After installation, type help ^estout^,
+d   ^esttab^, ^eststo^, ^estadd^, and ^estpost^
+f _\_eststo.ado
+f _\_eststo.hlp
+f e\esttab.ado
+f e\esttab.hlp
+f e\estadd.ado
+f e\estadd.hlp
+f e\eststo.ado
+f e\eststo.hlp
+f e\estout.ado
+f e\estout.hlp
+f e\estpost.ado
+f e\estpost.hlp
+e
