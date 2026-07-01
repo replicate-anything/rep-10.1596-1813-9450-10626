@@ -2,16 +2,20 @@
 # Study repo: rep-10.1596-1813-9450-10626
 
 format_tab_1 <- function(object) {
-  path <- if (requireNamespace("replicateEverything", quietly = TRUE)) {
-    replicateEverything::stata_result_path(object)
+  path <- if (is.list(object) && !is.data.frame(object)) {
+    if (!is.null(object$output_path)) {
+      as.character(object$output_path[[1]] %||% object$output_path)
+    } else if (!is.null(object$smcl_path)) {
+      as.character(object$smcl_path[[1]] %||% object$smcl_path)
+    } else {
+      NULL
+    }
   } else if (is.character(object) && length(object) == 1L) {
     object
-  } else if (is.list(object)) {
-    object$output_path %||% object$smcl_path %||% NULL
   } else {
     NULL
   }
-  if (is.null(path) || !file.exists(path)) {
+  if (is.null(path) || !nzchar(path) || !file.exists(path)) {
     stop("Stata SMCL output not found.")
   }
   if (!requireNamespace("replicateEverything", quietly = TRUE)) {
