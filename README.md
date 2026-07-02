@@ -9,9 +9,9 @@ Folder-backed replication study for [replicateEverything](https://github.com/rep
 
 | Path | Role |
 |------|------|
-| `code/*.do` | Stata wrappers invoked by replicateEverything |
+| `code/tab_*.do` | Stata runners (paths, logging) |
+| `code/Table1.do`, `code/Fig1_panelA.do` | Author analysis scripts |
 | `code/format_*.R` | R formatters (SMCL → HTML) |
-| `stata/` | Author do-files adapted for portable paths |
 | `ado/` | Bundled Stata ado files (estout, esttab, …) |
 | `data/` | Intermediate `.dta` files (not in git; see below) |
 | `artifacts/` | Precomputed display files |
