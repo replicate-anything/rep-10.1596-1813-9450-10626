@@ -1,7 +1,9 @@
 {
   "generated_at": "2026-07-01T20:30:00Z",
-  "folder": "rep-10.1596-1813-9450-10626",
+  "folder": "10.1596_1813-9450-10626",
   "doi": "10.1596/1813-9450-10626",
+  "study_repo": "replicate-anything/rep-10.1596-1813-9450-10626",
+  "study_folder": "rep-10.1596-1813-9450-10626",
   "replications": {
     "tab_1": {
       "status": "ok",
