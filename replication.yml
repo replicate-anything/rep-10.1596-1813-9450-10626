@@ -7,6 +7,18 @@ paper:
   language: stata
   materials: folder
 
+maintainer:
+  name: Macartan Humphreys
+  email: macartan.humphreys@wzb.eu
+
+collections:
+  - World Bank
+  - PED
+
+languages:
+  - r
+  - stata
+
 replications:
   - id: tab_1
     type: table
