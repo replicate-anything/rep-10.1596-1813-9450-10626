@@ -21,8 +21,8 @@ if "${REPLICATE_STATA_RESULT}" != "" {
     cap mkdir "${result}"
 }
 else {
-    global result "${maindir}/artifacts/staging"
-    cap mkdir "${maindir}/artifacts"
+    global result "${maindir}/outputs/staging"
+    cap mkdir "${maindir}/outputs"
     cap mkdir "${result}"
 }
 global ado_fldr "${maindir}/ado"
