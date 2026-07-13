@@ -14,7 +14,7 @@ Folder-backed replication study for [replicateEverything](https://github.com/rep
 | `code/format_*.R` | R formatters (SMCL → HTML) |
 | `ado/` | Bundled Stata ado files (estout, esttab, …) |
 | `data/` | Intermediate `.dta` files (not in git; see below) |
-| `artifacts/` | Precomputed display files |
+| `outputs/` | Precomputed display files |
 
 ## Data
 
