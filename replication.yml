@@ -6,41 +6,53 @@ paper:
   authors: Simone Bertoli, Elie Murard, David McKenzie
   language: stata
   materials: folder
-
 maintainer:
   name: Macartan Humphreys
   email: macartan.humphreys@wzb.eu
-
 collections:
-  - World Bank
-  - PED
-
+- World Bank
+- PED
 languages:
-  - r
-  - stata
-
-replications:
-  - id: tab_1
-    type: table
-    label: Table 1
-    description: Descriptive statistics by gender and age group
-    engine: stata
-    data: data/ACS2017-2021_finalready.dta
-    code: code/tab_1.do
-    stata_source: code/Table1.do
-    format: code/format_tab_1.R
-    output: outputs/staging/Table1.smcl
-    artifact: outputs/tab_1.html
-    notes: Analysis code is Stata; R helpers format output for Shiny.
-
-  - id: fig_1
-    type: figure
-    label: Figure 1
-    description: "Panel (a): spouse absent and separated/divorced shares by years in the US (men)"
-    engine: stata
-    data: data/ACS2017-2021_finalready.dta
-    code: code/fig_1.do
-    stata_source: code/Fig1_panelA.do
-    output: outputs/staging/Fig1_panelA.png
-    artifact: outputs/fig_1.png
-    notes: Stata exports PNG; R displays the file directly (no format step).
+- r
+- stata
+steps:
+- type: table
+  label: Table 1
+  description: Descriptive statistics by gender and age group
+  engine: stata
+  data: data/ACS2017-2021_finalready.dta
+  code: code/tab_1.do
+  stata_source: code/Table1.do
+  format: code/format_tab_1.R
+  artifact: outputs/tab_1.html
+  notes: Analysis code is Stata; R helpers format output for Shiny.
+  id: tab_1
+  parents: []
+  outputs:
+  - outputs/tab_1.html
+  - outputs/staging/Table1.smcl
+  inputs:
+  - data/ACS2017-2021_finalready.dta
+- id: tab_1_format
+  type: format
+  label: Table 1 format
+  parent: tab_1
+  code: code/format_tab_1.R
+- type: figure
+  label: Figure 1
+  description: 'Panel (a): spouse absent and separated/divorced shares by years in
+    the US (men)'
+  engine: stata
+  data: data/ACS2017-2021_finalready.dta
+  code: code/fig_1.do
+  stata_source: code/Fig1_panelA.do
+  artifact: outputs/fig_1.png
+  notes: Stata exports PNG; R displays the file directly (no format step).
+  id: fig_1
+  parents: []
+  outputs:
+  - outputs/fig_1.png
+  - outputs/staging/Fig1_panelA.png
+  inputs:
+  - data/ACS2017-2021_finalready.dta
+repo: replicate-anything/rep-10.1596-1813-9450-10626
