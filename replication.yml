@@ -26,7 +26,6 @@ steps:
   format: code/format_tab_1.R
   notes: Analysis code is Stata; R helpers format output for Shiny.
   id: tab_1
-  parents: []
   outputs:
   - outputs/tab_1.html
   - outputs/staging/Table1.smcl
@@ -34,7 +33,6 @@ steps:
   - data/ACS2017-2021_finalready.dta
 - id: tab_1_format
   type: format
-  label: Table 1 format
   parent: tab_1
   code: code/format_tab_1.R
 - type: figure
@@ -47,7 +45,6 @@ steps:
   stata_source: code/Fig1_panelA.do
   notes: Stata exports PNG; R displays the file directly (no format step).
   id: fig_1
-  parents: []
   outputs:
   - outputs/fig_1.png
   - outputs/staging/Fig1_panelA.png
